@@ -36,6 +36,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from './screens/LoginScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import HowAreYouFeelingScreen from './screens/HowAreYouFeelingScreen';
+import HomeScreen from './screens/HomeScreen';
 const Stack = createStackNavigator();
 const App = () => {
 
@@ -45,6 +46,11 @@ const App = () => {
       <NavigationContainer>
 
         <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen
             name="HowAreYouFeeling"
             component={HowAreYouFeelingScreen}
