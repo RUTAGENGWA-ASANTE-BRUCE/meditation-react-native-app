@@ -40,6 +40,7 @@ import HomeScreen from './screens/HomeScreen';
 import GuidedMeditationPart1Screen from './screens/GuidedMeditationPart1Screen';
 import GuidedMeditationPart2Screen from './screens/GuidedMeditationPart2Screen';
 import GuidedMeditationPart3Screen from './screens/GuidedMeditationPart3Screen';
+import GuidedMeditationPart4Screen from './screens/GuidedMeditationPart4Screen';
 const Stack = createStackNavigator();
 const App = () => {
 
@@ -49,9 +50,14 @@ const App = () => {
       <NavigationContainer>
 
         <Stack.Navigator>
-        <Stack.Screen
+          <Stack.Screen
             name="GuidedMeditationPart3Screen"
             component={GuidedMeditationPart3Screen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="GuidedMeditationPart4Screen"
+            component={GuidedMeditationPart4Screen}
             options={{ headerShown: false }}
           />
           <Stack.Screen
@@ -59,7 +65,7 @@ const App = () => {
             component={GuidedMeditationPart1Screen}
             options={{ headerShown: false }}
           />
-        <Stack.Screen
+          <Stack.Screen
             name="GuidedMeditationPart2Screen"
             component={GuidedMeditationPart2Screen}
             options={{ headerShown: false }}

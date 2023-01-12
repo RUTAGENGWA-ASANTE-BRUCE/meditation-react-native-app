@@ -10,7 +10,7 @@ import BottomNavigator from '../components/BottomNavigator';
 const GuidedMeditationPart3Screen = () => {
     const [screenWidth, setScreenWidth] = useState(Dimensions.get('screen').width);
     return (
-        <View style={tw`bg-[#3E5968] h-full  flex`}>
+        <View style={tw`bg-[#EFEAD4] h-full  flex`}>
 
             <View style={tw`absolute right-10  top-3 `}>
                 <Svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,10 +46,13 @@ const GuidedMeditationPart3Screen = () => {
                 </View>
             </View>
 
-
+            <View style={tw`absolute bottom-15 left-25`}>
+                <Svg width="254" height="254" viewBox="0 0 254 254" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <Circle cx="127" cy="127" r="127" fill="#E99028" />
+                </Svg>
+            </View>
             <View style={tw`absolute bottom-0`}>
                 <Svg style={[styles.svg, { transform: [{ scaleX: (Dimensions.get('screen').width / 430) + 0.2 }] }]} width="430" height="370" viewBox="0 0 430 370" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <Circle cx="215" cy="174" r="174" fill="#E99028" />
                         <Path d="M-238.681 693.505C-259.016 664.44 -272.466 630.045 -278.791 595.896C-287.665 547.781 -285.095 498.312 -280.008 449.634C-263.691 292.359 -177.195 125.835 -1.85282 114.887C115.784 107.579 228.653 166.39 319.595 235.577C453.216 337.233 615.702 597.935 405.336 718.947C292.238 783.99 147.197 718.15 25.5315 740.338C-31.4432 750.746 -89.4502 780.233 -147.905 762.372C-186.04 750.68 -216.443 725.301 -238.681 693.505Z" fill="#323E45" />
                         <Path d="M570.712 127.347C601.504 144.959 628.341 170.33 648.63 198.517C677.182 238.249 695.961 284.086 712.127 330.283C764.463 479.489 757.272 667 603.356 751.703C500.079 808.497 372.907 803.457 261.14 779.678C96.9211 744.739 -161.254 578.267 -22.6155 379.076C51.928 272.001 211.196 269.674 311.77 197.704C358.859 163.984 398.744 112.569 459.232 103.786C498.711 98.0924 537.035 108.076 570.712 127.347Z" fill="#B1BF80" />
                 </Svg>
