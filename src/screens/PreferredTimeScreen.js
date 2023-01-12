@@ -69,7 +69,6 @@ const PreferredTimeScreen = () => {
                 </Svg>
 
             </View>
-            <BottomNavigator />
 
         </View>
     );

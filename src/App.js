@@ -44,6 +44,7 @@ import GuidedMeditationPart4Screen from './screens/GuidedMeditationPart4Screen';
 import GuidedMeditationPart5Screen from './screens/GuidedMeditationPart5Screen';
 import RelaxationScreen from './screens/RelaxationScreen';
 import PreferredTimeScreen from './screens/PreferredTimeScreen';
+import NotesScreen from './screens/NotesScreen';
 const Stack = createStackNavigator();
 const App = () => {
 
@@ -53,6 +54,11 @@ const App = () => {
       <NavigationContainer>
 
         <Stack.Navigator>
+          <Stack.Screen
+            name="NotesScreen"
+            component={NotesScreen}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen
             name="PreferredTimeScreen"
             component={PreferredTimeScreen}
