@@ -37,6 +37,9 @@ import LoginScreen from './screens/LoginScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import HowAreYouFeelingScreen from './screens/HowAreYouFeelingScreen';
 import HomeScreen from './screens/HomeScreen';
+import GuidedMeditationPart1Screen from './screens/GuidedMeditationPart1Screen';
+import GuidedMeditationPart2Screen from './screens/GuidedMeditationPart2Screen';
+import GuidedMeditationPart3Screen from './screens/GuidedMeditationPart3Screen';
 const Stack = createStackNavigator();
 const App = () => {
 
@@ -46,6 +49,21 @@ const App = () => {
       <NavigationContainer>
 
         <Stack.Navigator>
+        <Stack.Screen
+            name="GuidedMeditationPart3Screen"
+            component={GuidedMeditationPart3Screen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="GuidedMeditationPart1Screen"
+            component={GuidedMeditationPart1Screen}
+            options={{ headerShown: false }}
+          />
+        <Stack.Screen
+            name="GuidedMeditationPart2Screen"
+            component={GuidedMeditationPart2Screen}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen
             name="Home"
             component={HomeScreen}
