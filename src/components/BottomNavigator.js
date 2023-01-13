@@ -9,10 +9,10 @@ const BottomNavigator = () => {
     return (
         <View style={tw`w-[${screenWidth}] absolute bottom-0  mx-20`}>
 
-            <View style={tw`bg-[#323E45] bottom-0 opacity-50  w-[310px] h-[45px] rounded-lg`}>
+            <View style={tw`bg-[#323E45] -bottom-5 opacity-50  w-[310px] h-[45px] rounded-lg`}>
 
             </View>
-            <View style={tw`bottom-9 flex flex-row  w-[290px] ml-3 h-[45px] rounded-lg justify-between `}>
+            <View style={tw`bottom-4 flex flex-row  w-[290px] ml-3 h-[45px] rounded-lg justify-between `}>
                 <TouchableOpacity>
                     <Home />
                 </TouchableOpacity>

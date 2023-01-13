@@ -46,6 +46,7 @@ import RelaxationScreen from './screens/RelaxationScreen';
 import PreferredTimeScreen from './screens/PreferredTimeScreen';
 import NotesScreen from './screens/NotesScreen';
 import FAQOpenVideoScreen from './screens/FAQOpenVideoScreen';
+import ProfileScreen from './screens/ProfileScreen';
 const Stack = createStackNavigator();
 const App = () => {
 
@@ -55,7 +56,12 @@ const App = () => {
       <NavigationContainer>
 
         <Stack.Navigator>
-          
+              
+        <Stack.Screen
+            name="ProfileScreen"
+            component={ProfileScreen}
+            options={{ headerShown: false }}
+          />
         <Stack.Screen
             name="FAQOpenVideoScreen"
             component={FAQOpenVideoScreen}

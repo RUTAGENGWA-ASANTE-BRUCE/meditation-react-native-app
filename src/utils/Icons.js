@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Svg, Path, Circle, Rect } from 'react-native-svg'
+import { Svg, Path, Circle, Rect, Ellipse } from 'react-native-svg'
 
 
 const QuestionMarkCircled = () => {
@@ -145,6 +145,30 @@ const Youtube = () => {
     )
 }
 
+const GoldStar = () => {
+    return (
+        <Svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Path d="M7 0L8.5716 4.83688H13.6574L9.5429 7.82624L11.1145 12.6631L7 9.67376L2.8855 12.6631L4.4571 7.82624L0.342604 4.83688H5.4284L7 0Z" fill="#E99028" />
+        </Svg>
+    )
+}
+
+const Lock = () => {
+    return (
+        <Svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Path d="M8.636 6.56216V3.75136C8.636 1.68484 7.00502 0 4.99868 0C2.99233 0 1.364 1.68212 1.364 3.75136V6.56489C0.61327 6.56489 0 7.19466 0 7.97165V13.596C0 14.3702 0.610626 15.0027 1.364 15.0027H8.636C9.38673 15.0027 10 14.373 10 13.596V7.96892C10 7.19193 9.38937 6.56216 8.636 6.56216ZM2.27333 3.75136C2.27333 2.20011 3.49722 0.937841 5.00132 0.937841C6.50542 0.937841 7.72931 2.20011 7.72931 3.75136V6.56489H2.27333V3.75136ZM9.09067 13.596C9.09067 13.855 8.88713 14.0649 8.636 14.0649H1.364C1.11287 14.0649 0.909331 13.855 0.909331 13.596V7.96892C0.909331 7.70992 1.11287 7.5 1.364 7.5H8.636C8.88713 7.5 9.09067 7.70992 9.09067 7.96892V13.5932V13.596ZM5.45334 10.4444V9.37841C5.45334 9.11941 5.2498 8.90949 4.99868 8.90949C4.74755 8.90949 4.54401 9.11941 4.54401 9.37841V10.4444C4.27439 10.608 4.08935 10.9051 4.08935 11.2514C4.08935 11.7694 4.49643 12.1892 4.99868 12.1892C5.50093 12.1892 5.90801 11.7694 5.90801 11.2514C5.90801 10.9051 5.72561 10.6052 5.45334 10.4444Z" fill="#323E45" />
+        </Svg>
+    )
+}
+
+const AvatarCircled = () => {
+    return (
+        <Svg width="53" height="83" viewBox="0 0 53 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Path d="M0 56.5C0 41.8645 11.8645 30 26.5 30V30C41.1355 30 53 41.8645 53 56.5V83H0V56.5Z" fill="#8CA78E" />
+            <Ellipse cx="26.5" cy="13.5" rx="14.5" ry="13.5" fill="#8CA78E" />
+        </Svg>
+    )
+}
 
 const styles = StyleSheet.create({})
 
@@ -162,5 +186,8 @@ export {
     Close,
     MoreThreeDots,
     MoveBackCircled,
-    Youtube
+    Youtube,
+    Lock,
+    GoldStar,
+    AvatarCircled
 };
