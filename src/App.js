@@ -47,6 +47,7 @@ import PreferredTimeScreen from './screens/PreferredTimeScreen';
 import NotesScreen from './screens/NotesScreen';
 import FAQOpenVideoScreen from './screens/FAQOpenVideoScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import FAQScreen from './screens/FAQScreen';
 const Stack = createStackNavigator();
 const App = () => {
 
@@ -56,25 +57,29 @@ const App = () => {
       <NavigationContainer>
 
         <Stack.Navigator>
-              
-        <Stack.Screen
-            name="ProfileScreen"
-            component={ProfileScreen}
-            options={{ headerShown: false }}
-          />
-        <Stack.Screen
-            name="FAQOpenVideoScreen"
-            component={FAQOpenVideoScreen}
-            options={{ headerShown: false }}
-          />
           <Stack.Screen
-            name="NotesScreen"
-            component={NotesScreen}
+            name="FAQScreen"
+            component={FAQScreen}
             options={{ headerShown: false }}
           />
           <Stack.Screen
             name="PreferredTimeScreen"
             component={PreferredTimeScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="FAQOpenVideoScreen"
+            component={FAQOpenVideoScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ProfileScreen"
+            component={ProfileScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="NotesScreen"
+            component={NotesScreen}
             options={{ headerShown: false }}
           />
           <Stack.Screen

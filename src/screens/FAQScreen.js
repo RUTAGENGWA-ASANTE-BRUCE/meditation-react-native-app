@@ -2,17 +2,75 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image, Pressable } from 'react-native';
 import tw from 'twrnc'
 import { Svg, Path, Circle, Rect } from 'react-native-svg'
-import { ArrowRight, Close, Heart, MoreThreeDots, MoveBackCircled, PlayVideoAudio, QuestionMarkCircled, ThumbsUp, Youtube } from '../utils/Icons';
+import { ArrowRight, Close, Heart, MoreThreeDots, MoveBackCircled, PlayVideoAudioLarge, QuestionMarkCircled, ThumbsUp, Youtube } from '../utils/Icons';
 import { Dimensions } from 'react-native';
 import Slider from '../components/Slider';
 import BottomNavigator from '../components/BottomNavigator';
 import Video from 'react-native-video';
 
-const FAQOpenVideoScreen = () => {
+const FAQScreen = () => {
     const [screenWidth, setScreenWidth] = useState(Dimensions.get('screen').width);
     const [error, setError] = useState({ isReady: true });
     const [videoXtics, setVideoXtics] = useState({ currentTime: 0, duration: 0 })
     const [isReady, setIsReady] = useState({ isReady: true });
+    const data = [
+
+        {
+            svg: <Svg width="120" height="105" viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <Circle cx="92" cy="18" r="18" fill="#E99028" />
+                <Path d="M120 67.3813C118.447 67.1415 116.865 67.0948 115.3 67.2644C106.049 68.2644 98.7142 75.8141 89.6994 78.1357C82.5601 79.972 74.7418 78.2819 68.5977 74.1474C63.9724 71.0363 59.1342 67.1182 53.9566 65.1065C46.6274 62.2585 37.486 67.1942 30.8816 62.8901C27.1653 60.469 25.5602 55.8842 23.0634 52.1825C19.0191 46.1883 12.0984 42.3053 4.95326 42.0129C3.04904 41.9369 1.40946 42.2 0 42.7263V88.0012H120V67.3813Z" fill="#6BB1C8" />
+                <Path d="M120 74.0359C118.356 73.7805 116.682 73.7307 115.026 73.9113C105.235 74.9765 97.4725 83.0184 87.9319 85.4914C80.376 87.4473 72.1018 85.6471 65.5993 81.2431C60.7041 77.9292 55.5837 73.7556 50.104 71.6128C42.3473 68.5791 32.6727 73.8366 25.6831 69.2519C21.7499 66.673 20.0512 61.7893 17.4088 57.8463C13.1286 51.4614 5.80411 47.3252 -1.7578 47.0137C-3.7731 46.9327 -5.50832 47.2131 -7 47.7737V96H120V74.0359Z" fill="#7BDADE" />
+                <Path d="M120 80.7947C118.175 80.5132 116.316 80.4583 114.477 80.6574C103.608 81.8313 94.9892 90.6937 84.3968 93.4191C76.008 95.5746 66.8217 93.5907 59.6023 88.7373C54.1676 85.0852 48.4827 80.4858 42.399 78.1243C33.7871 74.7811 23.046 80.575 15.2859 75.5225C10.9192 72.6805 9.03322 67.2985 6.09953 62.953C1.34748 55.9166 -6.78441 51.3584 -15.1799 51.0151C-17.4174 50.9259 -19.3439 51.2348 -21 51.8526V105H120V80.7947Z" fill="#BCF3FD" />
+            </Svg>,
+            bg: "#EFEAD4",
+            title: "What is meditation?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            svg: <Svg width="120" height="105" viewBox="0 0 120 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <Circle cx="60" cy="18" r="18" fill="#E99028" />
+                <Path d="M60.5 61L86.9138 136.75H34.0862L60.5 61Z" fill="#3B4E51" />
+                <Path d="M33.5 49L59.9138 124.75H7.08623L33.5 49Z" fill="#5A786F" />
+                <Path d="M10.5 36L36.9138 111.75H-15.9138L10.5 36Z" fill="#B1BF80" />
+                <Path d="M90.5 43L116.914 118.75H64.0862L90.5 43Z" fill="#5A786F" />
+                <Path d="M115.5 36L141.914 111.75H89.0862L115.5 36Z" fill="#B1BF80" />
+                <Circle cx="15" cy="11" r="4" fill="white" />
+                <Circle cx="19" cy="7" r="4" fill="white" />
+                <Circle cx="21" cy="12" r="4" fill="white" />
+                <Circle cx="24" cy="9" r="3" fill="white" />
+                <Circle cx="28" cy="11" r="3" fill="white" />
+                <Circle cx="25" cy="11" r="3" fill="white" />
+                <Circle cx="95" cy="29" r="4" fill="white" />
+                <Circle cx="99" cy="25" r="4" fill="white" />
+                <Circle cx="101" cy="30" r="4" fill="white" />
+                <Circle cx="104" cy="27" r="3" fill="white" />
+                <Circle cx="108" cy="29" r="3" fill="white" />
+                <Circle cx="105" cy="29" r="3" fill="white" />
+            </Svg>
+            ,
+            bg: "#EFEAD4",
+            title: "What is meditation?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            svg: <Svg width="120" height="109" viewBox="0 0 120 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <Circle cx="20" cy="42" r="1" fill="#D9D9D9" />
+                <Circle cx="38" cy="20" r="18" fill="#F7CC14" />
+                <Circle cx="74" cy="3" r="1" fill="#D9D9D9" />
+                <Circle cx="67" cy="23" r="1" fill="#D9D9D9" />
+                <Circle cx="15" cy="1" r="1" fill="#D9D9D9" />
+                <Circle cx="104" cy="13" r="1" fill="#D9D9D9" />
+                <Circle cx="90" cy="40" r="1" fill="#D9D9D9" />
+                <Path d="M43.2593 102.001C53.4565 82.3497 70.9755 66.6701 91.3927 57.7886C159.845 28.0187 216.76 105.517 195.282 168.44C191.564 179.326 184.801 190.397 173.801 193.766C161.45 197.547 148.484 190.343 138.607 182.025C128.731 173.708 119.483 163.66 107.05 160.169C86.2294 154.34 65.1118 167.106 47.2423 149.654C33.1029 135.826 34.8455 118.195 43.2593 102.001Z" fill="#5A786F" />
+                <Path d="M-30.2494 84.9752C-34.1181 106.774 -29.7596 129.878 -18.9643 149.351C17.2333 214.632 109.56 187.778 130.812 124.778C134.487 113.877 135.858 100.977 129.18 91.609C121.681 81.0923 107.009 78.9171 94.1098 79.5061C81.2108 80.0952 67.7578 82.4395 55.7676 77.6428C35.6993 69.5973 26.7124 46.6154 1.91198 49.588C-17.7226 51.9547 -27.0704 67.0055 -30.2494 84.9752Z" fill="#B1BF80" />
+                <Circle cx="52" cy="56" r="1" fill="#D9D9D9" />
+            </Svg>
+            ,
+            bg: "#323E45",
+            title: "What is meditation?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+    ]
     return (
         <View style={tw`bg-[#A3846B] h-full  flex`}>
             <View style={tw`absolute top-0 left-0`}>
@@ -38,33 +96,34 @@ const FAQOpenVideoScreen = () => {
                 </Svg>
 
             </View>
-            <View style={tw`mt-50 flex items-center justify-center `}>
-                <View style={tw`w-[328px]`}>
 
-                    <View style={tw``}>
-                        <View style={tw`absolute right-0 -top-5 `}>
-                            <Close />
-                        </View>
-                        <Video
-                            style={tw`w-[328px] h-[208px] bg-black rounded-3xl`}
-                            source={{ uri: `https://youtu.com/watch?v49ZjNmgckzs` }}
-                        />
-                        <Pressable style={tw`absolute left-[120px] top-[80px] `}>
-                            <Youtube />
-                        </Pressable>
-                    </View>
-                    <View style={tw`flex mt-5 w-full`}>
-                        <Text style={tw`text-white text-xl font-smeibold`}>What is meditation?</Text>
-                        <Text style={tw`text-white font-light text-xs mt-2`}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </Text>
-                    </View>
-                </View>
-            </View>
             <View style={tw`absolute left-10 top-50.808C379`}>
                 <Svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <Path d="M8.82649 1.63655C8.45264 1.24895 7.97932 0.92994 7.48541 0.820156C6.74112 0.641762 5.90935 0.667445 5.24048 1.08244C5.03125 1.23678 4.82201 1.39112 4.61278 1.54545C4.48243 1.6655 4.39496 1.81127 4.29034 1.94675C4.19773 1.98447 4.11026 2.01362 4.01251 2.05992C3.54773 2.27084 3.12755 2.60181 2.73137 2.91221C2.33519 3.2226 2.02476 3.64276 1.72462 4.04576C1.6543 4.14351 1.58741 4.25498 1.53424 4.36303C1.36444 4.7043 1.19807 5.0593 1.08486 5.42287C1.01797 5.65096 0.990514 5.89105 0.963062 6.13115C0.92532 6.3884 0.873859 6.64907 0.894426 6.90632C0.940689 7.7621 1.07958 8.28861 1.41911 9.0638C1.46884 9.17527 1.52714 9.2919 1.59059 9.39994C1.78265 9.70179 2.00559 10.0105 2.2491 10.2849C2.93163 11.0327 3.89542 11.5644 4.84723 11.844C5.86934 12.1424 6.86232 12.1202 7.89647 11.971C8.43155 11.8956 8.92719 11.6915 9.42797 11.4789C9.91847 11.2834 10.3524 10.949 10.7588 10.6215C10.8686 10.5357 10.9664 10.4311 11.059 10.3351C11.3145 10.0453 11.5992 9.72628 11.7827 9.38157C12.2201 8.59442 12.3436 7.98046 12.4603 7.10582C12.4757 6.73024 12.4003 6.37009 12.246 6.04423C12.258 5.94648 12.2734 5.86245 12.2854 5.76469C12.2854 5.23991 12.162 4.74598 11.9151 4.28293C11.723 3.80615 11.3972 3.37739 11.0576 3.01037C10.809 2.74453 10.4986 2.52328 10.2105 2.30375C10.1041 2.22829 9.9978 2.15282 9.88633 2.08593C9.5502 1.90756 9.19349 1.76348 8.82135 1.64513L8.82649 1.63655Z" fill="#DEE4BB" />
                 </Svg>
+            </View>
+            <View style={tw`mt-35 flex items-center justify-center `}>
+                <View style={tw`flex flex-col w-[90%]  `}>
+                    {data.map((item,i)=>(
+                    <View key={i} style={tw`w-full flex flex-row mt-8`}>
+                        <View style={tw`w-[140px] h-[140px] flex  shadow-md rounded-xl justify-center items-center`}>
+                            <View style={tw`flex h-[120px] w-[120px] bg-[${item.bg}] overflow-hidden rounded-xl pt-5`}>
+                                {item.svg}
+                            </View>
+                            <Pressable style={tw`absolute top-27`}>
+                                <PlayVideoAudioLarge />
+                            </Pressable>
+                        </View>
+                        <View style={tw`ml-5 flex flex-col w-70`}>
+                            <Text style={tw`text-white text-xl font-bold`}>{item.title}</Text>
+                            <Text style={tw`text-white font-light text-xs mt-2`}>
+                                {item.description}
+                            </Text>
+                        </View>
+                    </View>
+                    ))}
+
+                </View>
             </View>
             <View style={tw`absolute bottom-40 right-10`}>
                 <Svg width="75" height="269" viewBox="0 0 75 269" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,16 +140,11 @@ const FAQOpenVideoScreen = () => {
                 </Svg>
 
             </View>
-            <View style={tw`absolute bottom-8 left-8`}>
-                <MoveBackCircled />
-            </View>
-            <View style={tw`absolute bottom-8 right-8`}>
-                <MoreThreeDots />
-            </View>
+            <BottomNavigator />
         </View>
     );
 }
 
 const styles = StyleSheet.create({})
 
-export default FAQOpenVideoScreen;
+export default FAQScreen;
