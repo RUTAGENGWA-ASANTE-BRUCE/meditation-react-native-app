@@ -107,6 +107,45 @@ const Home = () => {
 
     )
 }
+
+const Close = () => {
+    return (
+        <Svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Path d="M1.56818 0.272727L3.81818 3.90341H3.88636L6.13636 0.272727H7.38068L4.63636 4.63636L7.38068 9H6.13636L3.88636 5.4375H3.81818L1.56818 9H0.323864L3.13636 4.63636L0.323864 0.272727H1.56818Z" fill="white" />
+        </Svg>
+    )
+}
+
+const MoreThreeDots = () => {
+    return (
+        <Svg width="30" height="6" viewBox="0 0 30 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Circle cx="3" cy="3" r="3" fill="white" />
+            <Circle cx="15" cy="3" r="3" fill="white" />
+            <Circle cx="27" cy="3" r="3" fill="white" />
+        </Svg>
+    )
+}
+
+const MoveBackCircled = () => {
+    return (
+        <Svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Circle cx="14.5" cy="14.5" r="14" stroke="#323E45" />
+            <Path d="M19 20L9 14.5L19 9" stroke="#323E45" stroke-miterlimit="10" />
+        </Svg>
+    )
+}
+
+const Youtube = () => {
+    return (
+        <Svg width="89" height="55" viewBox="0 0 89 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Rect width="89" height="55" rx="20" fill="#C73737" />
+            <Path d="M58 27.5L37.75 39.1913L37.75 15.8087L58 27.5Z" fill="white" />
+        </Svg>
+
+    )
+}
+
+
 const styles = StyleSheet.create({})
 
 export {
@@ -119,5 +158,9 @@ export {
     Profile,
     Heart,
     ArrowRight,
-    ThumbsUp
+    ThumbsUp,
+    Close,
+    MoreThreeDots,
+    MoveBackCircled,
+    Youtube
 };

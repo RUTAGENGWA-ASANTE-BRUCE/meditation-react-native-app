@@ -57,7 +57,7 @@ const NotesScreen = () => {
 
             </View>
             <BottomNavigator />
-
+            
         </View>
     );
 }
